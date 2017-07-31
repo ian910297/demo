@@ -1,6 +1,23 @@
-body {
-  background: #white;
+body, .divider{
+  background: #EAEAEA;
 }
+
+body > .container {
+  background: #FFFFFF;
+}
+
+body > .container > .row , .container > .row > .col{
+  height: 595px;
+}
+
+.bathroom {
+  background-image: url(bathroom.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+}
+
 .human {
   width: 233px;
   height: 589px;
