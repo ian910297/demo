@@ -1,8 +1,8 @@
-body, .divider{
+body {
   background: #EAEAEA;
 }
 
-body > .container {
+#fullpage-container .section .container {
   background: #FFFFFF;
 }
 

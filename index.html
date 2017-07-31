@@ -4,121 +4,164 @@
     <meta charset="UTF-8">
     <title>智能洗澡機</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fullpage.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css">
     <!-- Materialize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <!-- Demonic's CSS -->
     <link rel="stylesheet" href="assets/index.css">
   </head>
   <body>
-    <div class="container" id="intro-container">
-      <div class="row">
-        <div class="col s6 bathroom center-align">
-          <img src="assets/human/all.png" alt="human" class="human">
-        </div>
-        <div class="col s6 center-align valign-wrapper">
-          <div class="row">
-            <div class="col s12">
-              <h3>歡迎使用智能洗澡機</h3>
-            </div>
-            <div class="col s12">
-              <a class="waves-effect waves-light btn scroll-btn" scroll-index="1">開始使用</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="divider"></div>
-    <div class="container" id="hair-container">
-      <div class="row center-align">
-        <div class="col s6 bathroom">
-          <img src="assets/human/hair.png" alt="human-hair" class="human">
-        </div>
-        <div class="col s6 valign-wrapper">
-          <div class="row">
-            <div class="col s12">
-              <h3>請選擇頭部功能</h3>
-            </div>
-            <div class="col s12">
-              <a class="waves-effect waves-light btn scroll-btn" scroll-index="2">下一步</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="divider"></div>
-    <div class="container" id="head-container">
-      <div class="row center-align">
-        <div class="col s6 bathroom">
-          <img src="assets/human/head.png" alt="human-head" class="human">
-        </div>
-        <div class="col s6 valign-wrapper">
-          <div class="row">
-            <div class="col s12">
-              <h3>請選擇臉部功能</h3>
-            </div>
-            <div class="col s12">
-              <a class="waves-effect waves-light btn scroll-btn" scroll-index="3">下一步</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="divider"></div>
-    <div class="container" id="body-container">
-      <div class="row center-align">
-        <div class="col s6 bathroom">
-          <img src="assets/human/body.png" alt="human-body" class="human">
-        </div>
-        <div class="col s6 valign-wrapper">
-          <div class="row">
-            <div class="col s12">
-              <h3>請選擇身體功能</h3>
-            </div>
-            <div class="col s12">
-              <a class="waves-effect waves-light btn scroll-btn" scroll-index="4">下一步</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="divider"></div>
-    <div class="container" id="result-container">
-      <div class="row center-align">
-        <div class="col s12">
-          <table>
-            <thead>
-              <tr>
-                <th>部位</th>
-                <th>功能</th>
-              </tr>
-            </thead>
-            <tbody>          
-              <tr>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <footer class="page-footer grey darken-3">
-      <div class="footer-copyright">
+    <div id="fullpage-container">
+      <div class="section" id="intro-container">
         <div class="container">
-          &copy;2017</span> Zhongli Happy Team, All Rights Reserved
+          <div class="row">
+            <div class="col s6 bathroom center-align">
+              <img src="assets/human/all.png" alt="human" class="human">
+            </div>
+            <div class="col s6 center-align valign-wrapper">
+              <div class="row">
+                <div class="col s12">
+                  <h3>歡迎使用智能洗澡機</h3>
+                </div>
+                <div class="col s12">
+                  <a class="waves-effect waves-light btn scroll-btn" scroll-index="2">開始使用</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="hair-container">
+        <div class="container">
+          <div class="row center-align">
+            <div class="col s6 bathroom">
+              <img src="assets/human/hair.png" alt="human-hair" class="human">
+            </div>
+            <div class="col s6 valign-wrapper">
+              <div class="row">
+                <div class="col s12">
+                  <h3>請選擇頭部功能</h3>
+                </div>
+                <div class="col s12">
+                  <p>
+                    <input type="checkbox" name="option" id="option1" value="頭部;洗頭"/>
+                    <label for="option1">洗頭</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" name="option" id="option2" value="頭部;按摩頭部"/>
+                    <label for="option2">按摩頭部</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" name="option" id="option3" value="頭部;去角質"/>
+                    <label for="option3">去角質</label>
+                  </p>
+                </div>
+                <div class="col s12">
+                  <a class="waves-effect waves-light btn scroll-btn" scroll-index="3">下一步</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="head-container">
+        <div class="container">
+          <div class="row center-align">
+            <div class="col s6 bathroom">
+              <img src="assets/human/head.png" alt="human-head" class="human">
+            </div>
+            <div class="col s6 valign-wrapper">
+              <div class="row">
+                <div class="col s12">
+                  <h3>請選擇臉部功能</h3>
+                </div>
+                <div class="col s12">
+                  <p>
+                    <input type="checkbox" name="option" id="option11" value="臉部;洗臉"/>
+                    <label for="option11">洗臉</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" name="option" id="option12" value="臉部;敷臉"/>
+                    <label for="option12">洗頭</label>
+                  </p>
+                </div>
+                <div class="col s12">
+                  <a class="waves-effect waves-light btn scroll-btn" scroll-index="4">下一步</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="body-container">
+        <div class="container">
+          <div class="row center-align">
+            <div class="col s6 bathroom">
+              <img src="assets/human/body.png" alt="human-body" class="human">
+            </div>
+            <div class="col s6 valign-wrapper">
+              <div class="row">
+                <div class="col s12">
+                  <h3>請選擇身體功能</h3>
+                </div>
+                <div class="col s12">
+                  <p>
+                    <input type="checkbox" name="option" id="option21" value="身體;擦背"/>
+                    <label for="option21">擦背</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" name="option" id="option22" value="身體;按摩肩膀"/>
+                    <label for="option22">按摩肩膀</label>
+                  </p>
+                </div>
+                <div class="col s12">
+                  <a class="waves-effect waves-light btn scroll-btn" scroll-index="5">下一步</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="result-container">
+        <div class="container">
+          <div class="row center-align">
+            <div class="col s12">
+              <h3>統計</h3>
+              <table id="result-table">
+                <thead>
+                  <tr>
+                    <th>部位</th>
+                    <th>功能</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a class="waves-effect waves-light btn scroll-btn" scroll-index="6">開始洗澡</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="row center-align">
+            <div class="col s12 bathroom">
+              <img src="assets/bathtub.png">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Materialize -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <!-- scroll.js -->
-  <script src="assets/scroll-min.js"></script>
-  <!-- Demonic's JS -->
-  <script src="assets/index.js"></script>
-</body>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <!-- fullpage.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
+    <!-- Demonic's JS -->
+    <script src="assets/index.js"></script>
+  </body>
 </html>

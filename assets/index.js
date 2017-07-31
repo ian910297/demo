@@ -1,11 +1,26 @@
-var SectionLen = 595 + 20;// Length + Margin-bottom
-
 $(document).ready(function() {
-  $('.scroll-btn').click(function() {
-    var scroll = new Scroll(document.body);
-    var scrollIndex = $(this).attr('scroll-index');
-    scroll.to(0, SectionLen * scrollIndex).then(function() {
+  $('#fullpage-container').fullpage();
 
+  $('.scroll-btn').click(function() {
+    var scrollIndex = $(this).attr('scroll-index');
+    $.fn.fullpage.moveTo(scrollIndex);
+  });
+
+  $('input[name="option"]').change(function() {
+    var text = '';
+    $('input[name="option"]').each(function() {
+      var value = $(this).val();
+      var dirty = $(this).prop('checked');
+      var data = value.split(';');
+
+      if(dirty) {
+        text += `<tr>`;
+        text += `<td>${data[0]}</td>`;
+        text += `<td>${data[1]}</td>`;
+        text += `</tr>`;
+      }
     });
-  })
+
+    $('#result-table tbody').html(text);
+  });
 });
