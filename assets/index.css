@@ -27,3 +27,8 @@ body > .container > .row , .container > .row > .col{
   position: relative;
 }
 
+#bathtub {
+  position: relative;
+  top: 100px;
+}
+
